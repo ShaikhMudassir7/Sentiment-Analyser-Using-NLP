@@ -26,6 +26,7 @@ def tokenization():
     return tokenized_text
 def stopwords():
     # stop word list 
+    tokenized_text = tokenization()
     stop_words = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself",
               "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself",
               "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these",
@@ -36,8 +37,12 @@ def stopwords():
               "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each",
               "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than",
               "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
-
-
-cleaning()
-tokenization()
+    final_words = []
+    for words in tokenized_text:
+        if words not in stop_words:
+            final_words.append(words)
+    # the for loop make a temporary pointer ```words``` which'll itterate and store ```tokenized_text``` list
+    # if ```word``` is not a stop_words then it will append it to ```final_words``` list
+    # print(final_words)
+stopwords()
 
