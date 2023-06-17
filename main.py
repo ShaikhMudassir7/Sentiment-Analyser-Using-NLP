@@ -2,8 +2,12 @@
 # 1) Create a text file and fetch text from import
 # 2) Convert the letters to lowercase ('Apple' is not equal to 'apple')
 # 3) Remove punctuation like .,!? etc (Hi! This is Mudassir's CodingHood')
+
+# for text cleaning step
 import string
+# for emotion_counter
 from collections import Counter
+# for plotting gragh
 import matplotlib.pyplot as plt
 
 
